@@ -1016,5 +1016,11 @@ export default function day1() {
   const result = sortedA.map((value, index) => {
     return Math.abs(value - sortedB[index]);
   });
-  return result.reduce((acc, value) => acc + value, 0);
+  const similarityScore = sortedA.map((value, index) => {
+    return sortedB.filter((v) => v === value).length * value;
+  });
+  return [
+    result.reduce((acc, value) => acc + value, 0),
+    similarityScore.reduce((acc, value) => acc + value, 0),
+  ];
 }

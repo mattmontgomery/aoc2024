@@ -12,6 +12,13 @@ if (!(`day${args.day}` in days)) {
   process.exit(1);
 } else {
   const day = days[`day${args.day}` as keyof typeof days];
-  const result = day();
-  cli.info(`result: ${result}`);
+  const result: unknown = day();
+  if (Array.isArray(result)) {
+    cli.info(`Day ${args.day} results:`);
+    cli.info(
+      result.map((r, idx) => `Part ${idx}: ${r.toString()}`).join("  |  "),
+    );
+  } else {
+    cli.info(`Day ${args.day} result: ${result}`);
+  }
 }
