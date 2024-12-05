@@ -13,5 +13,5 @@ if (!(`day${args.day}` in days)) {
 } else {
   const day = days[`day${args.day}` as keyof typeof days];
   const result = day();
-  cli.info(result);
+  cli.info(`result: ${result}`);
 }

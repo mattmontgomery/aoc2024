@@ -1,3 +1,1 @@
-export function day1() {
-  return "Day 1";
-}
+export { default as day1 } from "./day-one";
