@@ -1,0 +1,13 @@
+{
+    "name": "aoc2024",
+    "version": "1.0.0",
+    "description": "",
+    "scripts": {
+        "start": "ts-node src/index --day 1"
+    },
+    "dependencies": {
+        "ts-node": "^10.9.2",
+        "typescript": "^5.7.2"
+    },
+    "packageManager": "pnpm@9.1.4+sha256.30a1801ac4e723779efed13a21f4c39f9eb6c9fbb4ced101bce06b422593d7c9"
+}
