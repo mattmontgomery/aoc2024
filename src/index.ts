@@ -16,7 +16,7 @@ if (!(`day${args.day}` in days)) {
   if (Array.isArray(result)) {
     cli.info(`Day ${args.day} results:`);
     cli.info(
-      result.map((r, idx) => `Part ${idx}: ${r.toString()}`).join("  |  "),
+      result.map((r, idx) => `Part ${idx + 1}: ${r.toString()}`).join("  |  "),
     );
   } else {
     cli.info(`Day ${args.day} result: ${result}`);
