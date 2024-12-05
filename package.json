@@ -3,7 +3,9 @@
   "version": "1.0.0",
   "description": "",
   "scripts": {
-    "start": "ts-node src/index"
+    "start": "ts-node src/index",
+    "test": "node --test --require ts-node/register **/*.test.ts",
+    "test:watch": "node --test --watch --require ts-node/register **/*.test.ts"
   },
   "dependencies": {
     "cli": "^1.0.1",
