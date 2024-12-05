@@ -1,3 +1,5 @@
+import { inputs } from "../../inputs";
+
 const LEVELS = inputs["2"];
 
 const PARSED_LEVELS = LEVELS.trim()

@@ -1,3 +1,5 @@
+import { inputs } from "../../inputs";
+
 const RAW_INPUT = inputs["1"];
 
 const LOCATION_IDS_A = RAW_INPUT.split("\n")
