@@ -1,5 +1,5 @@
 inputs.ts
-inputs*.txt
+input*.txt
 
 # generate a gitignore for a typescript/node project
 # dependencies
