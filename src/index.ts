@@ -1,5 +1,6 @@
 import cli from "cli";
 import * as days from "./days";
+import { inputs } from "../inputs";
 
 const args = cli.parse({
   day: ["day", "Which day are you running?", "number"],
@@ -12,7 +13,7 @@ if (!(`day${args.day}` in days)) {
   process.exit(1);
 } else {
   const day = days[`day${args.day}` as keyof typeof days];
-  const result: unknown = day();
+  const result: unknown = day(inputs[3]);
   if (Array.isArray(result)) {
     cli.info(`Day ${args.day} results:`);
     cli.info(

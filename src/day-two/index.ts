@@ -1,14 +1,8 @@
-import { inputs } from "../../inputs";
-import debug from "../debug";
-
-const LEVELS = inputs["2"];
-// const LEVELS = `66 69 70 73 76 79 77 83`;
-
-const PARSED_LEVELS = LEVELS.trim()
-  .split("\n")
-  .map((row) => row.split(" ").map(Number));
-
-export default function dayTwo() {
+export default function dayTwo(input: string) {
+  const PARSED_LEVELS = input
+    .trim()
+    .split("\n")
+    .map((row) => row.split(" ").map(Number));
   const partOne = PARSED_LEVELS.map((row) => {
     const steps = row.map((v, i): number => {
       if (i === 0) return 0;

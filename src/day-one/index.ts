@@ -1,17 +1,16 @@
 import { inputs } from "../../inputs";
 
-const RAW_INPUT = inputs["1"];
-
-const LOCATION_IDS_A = RAW_INPUT.split("\n")
-  .filter(Boolean)
-  .map((line) => line.split(/\s+/)[0])
-  .map(Number);
-const LOCATION_IDS_B = RAW_INPUT.split("\n")
-  .filter(Boolean)
-  .map((line) => line.split(/\s+/)[1])
-  .map(Number);
-
-export default function day1() {
+export default function day1(input: string) {
+  const LOCATION_IDS_A = input
+    .split("\n")
+    .filter(Boolean)
+    .map((line) => line.split(/\s+/)[0])
+    .map(Number);
+  const LOCATION_IDS_B = input
+    .split("\n")
+    .filter(Boolean)
+    .map((line) => line.split(/\s+/)[1])
+    .map(Number);
   const sortedA = LOCATION_IDS_A.sort();
   const sortedB = LOCATION_IDS_B.sort();
   const result = sortedA.map((value, index) => {
